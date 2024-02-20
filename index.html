@@ -1,0 +1,220 @@
+<!-- learning notes:
+theme toggle: custom data-theme attribute + 2 sets of dedicated CSS custom colors + toggle switch
+toggle switch: checkbox input + label, CSS styling with label::after 
+border gradient color: add 2 layers of background color with "backgroud:" , then add a transparent border-->
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="heading-cont">
+          <h1 class="header__heading">Social Media Dashboard</h1>
+          <p class="header__followers">Total Followers: 23,004</p>
+        </div>
+        <div class="theme-cont">
+          <span class="theme__text">Dark Mode</span>
+          <div class="theme__toggle-cont">
+            <input type="checkbox" name="theme-toggle" id="theme-toggle" />
+            <label for="theme-toggle"></label>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="dashboard-cont">
+          <div class="dashboard facebook">
+            <div class="dashboard__title">
+              <img src="images/icon-facebook.svg" alt="facebook" />
+              <span class="dashboard__name">@nathanf</span>
+            </div>
+            <div class="dashboard__count">
+              <span class="dashboard__number">1987</span>
+              <span class="dashboard__unit">Followers</span>
+            </div>
+            <div class="dashboard__change">
+              <img src="images/icon-up.svg" alt="change" />
+              <span class="percentage-up">12 Today</span>
+            </div>
+          </div>
+          <div class="dashboard twitter">
+            <div class="dashboard__title">
+              <img src="images/icon-twitter.svg" alt="twitter" />
+              <span class="dashboard__name">@nathanf</span>
+            </div>
+            <div class="dashboard__count">
+              <span class="dashboard__number">1044</span>
+              <span class="dashboard__unit">Followers</span>
+            </div>
+            <div class="dashboard__change">
+              <img src="images/icon-up.svg" alt="change" />
+              <span class="percentage-up"> 99 Today</span>
+            </div>
+          </div>
+
+          <div class="dashboard instagram">
+            <div class="dashboard__title">
+              <img src="images/icon-instagram.svg" alt="instagram" />
+              <span class="dashboard__name">@realnathanf</span>
+            </div>
+            <div class="dashboard__count">
+              <span class="dashboard__number">11k</span>
+              <span class="dashboard__unit">Followers</span>
+            </div>
+            <div class="dashboard__change">
+              <img src="images/icon-up.svg" alt="change" />
+              <span class="percentage-down">1099 Today</span>
+            </div>
+          </div>
+
+          <div class="dashboard youtube">
+            <div class="dashboard__title">
+              <img src="images/icon-youtube.svg" alt="youtube" />
+              <span class="dashboard__name">Nathan F.</span>
+            </div>
+            <div class="dashboard__count">
+              <span class="dashboard__number">8239</span>
+              <span class="dashboard__unit">Subscribers</span>
+            </div>
+            <div class="dashboard__change">
+              <img src="images/icon-down.svg" alt="change" />
+              <span class="percentage-up">144 Today</span>
+            </div>
+          </div>
+        </section>
+        <section class="overview-outer-cont">
+          <h2 class="overview__heading">Overview - Today</h2>
+          <div class="overview-cont">
+            <div class="overview">
+              <span class="overview__text">Page Views</span>
+              <img
+                src="images/icon-facebook.svg"
+                alt="facebook"
+                class="overview__image"
+              />
+              <span class="overview__number">87</span>
+              <div class="overview__change">
+                <img src="images/icon-up.svg" alt="up arrow" />
+                <span class="percentage-up">3%</span>
+              </div>
+            </div>
+            <div class="overview">
+              <span class="overview__text">Likes</span>
+              <img
+                src="images/icon-facebook.svg"
+                alt="facebook"
+                class="overview__image"
+              />
+              <span class="overview__number">52</span>
+              <div class="overview__change">
+                <img src="images/icon-down.svg" alt="down arrow" />
+                <span class="percentage-down">2%</span>
+              </div>
+            </div>
+            <div class="overview">
+              <span class="overview__text">Likes</span>
+              <img
+                src="images/icon-instagram.svg"
+                alt="instagram"
+                class="overview__image"
+              />
+              <span class="overview__number">5462</span>
+              <div class="overview__change">
+                <img src="images/icon-up.svg" alt="up arrow" />
+                <span class="percentage-up">2257%</span>
+              </div>
+            </div>
+            <div class="overview">
+              <span class="overview__text">Profile Views</span>
+              <img
+                src="images/icon-instagram.svg"
+                alt="instagram"
+                class="overview__image"
+              />
+              <span class="overview__number">52k</span>
+              <div class="overview__change">
+                <img src="images/icon-up.svg" alt="up arrow" />
+                <span class="percentage-up">1375%</span>
+              </div>
+            </div>
+            <div class="overview">
+              <span class="overview__text">Retweets</span>
+              <img
+                src="images/icon-twitter.svg"
+                alt="twitter"
+                class="overview__image"
+              />
+              <span class="overview__number">117</span>
+              <div class="overview__change">
+                <img src="images/icon-up.svg" alt="up arrow" />
+                <span class="percentage-up">303%</span>
+              </div>
+            </div>
+            <div class="overview">
+              <span class="overview__text">Likes</span>
+              <img
+                src="images/icon-twitter.svg"
+                alt="twitter"
+                class="overview__image"
+              />
+              <span class="overview__number">507</span>
+              <div class="overview__change">
+                <img src="images/icon-up.svg" alt="up arrow" />
+                <span class="percentage-up">553%</span>
+              </div>
+            </div>
+            <div class="overview">
+              <span class="overview__text">Likes</span>
+              <img
+                src="images/icon-youtube.svg"
+                alt="youtube"
+                class="overview__image"
+              />
+              <span class="overview__number">109</span>
+              <div class="overview__change">
+                <img src="images/icon-down.svg" alt="down arrow" />
+                <span class="percentage-down">19%</span>
+              </div>
+            </div>
+            <div class="overview">
+              <span class="overview__text">Total Views</span>
+              <img
+                src="images/icon-youtube.svg"
+                alt="youtube"
+                class="overview__image"
+              />
+              <span class="overview__number">1407</span>
+              <div class="overview__change">
+                <img src="images/icon-down.svg" alt="down arrow" />
+                <span class="percentage-down">12%</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
